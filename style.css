@@ -1,0 +1,139 @@
+/* styles.css */
+
+/* 全体の背景色とフォント色を設定 */
+body {
+  background-color: #f8f8f8; /* やや明るめのグレー */
+  color: #444; /* 濃いめの文字色 */
+  font-family: Arial, sans-serif;
+}
+
+/* テーブルコンテナ */
+.table-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* テーブル */
+table {
+  border-collapse: collapse;
+}
+
+/* セル */
+.cell, td, tr {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+/* 通常のセル */
+.cell {
+  background-color: #ebebeb; /* やや明るめのグレー */
+  border: 1px solid #bbb; /* やや薄いめのグレー */
+  display: inline-block;
+  text-align: center;
+  font-size: 18px;
+  line-height: 50px;
+}
+
+  /* 選択されたセル */
+  .select-cell {
+    background-color: #ffd700; /* 黄色 */
+  }
+
+  /* 移動可能なセル */
+  .moveable-cell {
+    background-color: #b0e0e6; /* ライトブルー */
+  }
+
+  .piece-major {
+    font-size: 20px;
+  }
+
+  .piece-promote {
+    color: red;
+  }
+
+/* ホールドピース */
+.hold-piece {
+  margin: 20px;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ホールドピース内の要素 */
+.hold-piece button {
+  width: 40px;
+  height: 40px;
+  background-color: #ebebeb; /* やや明るめのグレー */
+  border: 1px solid #bbb; /* やや薄いめのグレー */
+  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+  margin-right: 5px;
+}
+
+  .hold-button-select {
+    background-color: #ffd700 !important; /* 黄色 */
+  }
+
+/* チームが false の場合 */
+.team-false {
+  transform: rotate(0deg);
+}
+
+/* チームが true の場合 */
+.team-true {
+  transform: rotate(180deg);
+}
+
+/* アップグレードボタンコンテナ */
+.promote-buttons-container {
+  position: absolute;
+  top: 46%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* アップグレードボタン */
+.promote-buttons-container button {
+  margin: 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 3px;
+  background-color: #6b8e91; /* グレーグリーン */
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ホバー時のアップグレードボタン */
+.promote-buttons-container button:hover {
+  background-color: #435e61; /* より濃いグレーグリーン */
+}
+
+/* 勝利ユーザーの表示 */
+#winning-team-display {
+  display: none;
+  position: fixed;
+  top: 46%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  background-color: #193246;
+  color: white;
+  padding: 30px 60px;
+  border-radius: 5px;
+  font-size: 30px;
+  text-align: center;
+  z-index: 1000; /* 他の要素よりも前面に表示するための z-index */
+}
